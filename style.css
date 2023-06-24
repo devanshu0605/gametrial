@@ -1,0 +1,159 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  
+  #game-container {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    border: 5px solid #000;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ff4081;
+    color: #fff;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    animation: bubbleMove 5s infinite linear;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    backface-visibility: hidden;
+  }
+  
+  .pop {
+    animation: bubblePop 0.3s linear;
+  }
+  
+  @keyframes bubbleMove {
+    0% {
+      top: -60px;
+      transform: translateZ(0);
+    }
+    100% {
+      top: 440px;
+      transform: translateZ(300px);
+    }
+  }
+  
+  @keyframes bubblePop {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  #input-container {
+    margin-top: 30px;
+  }
+  
+  #number-input {
+    padding: 10px 15px;
+    font-size: 24px;
+  }
+  
+  #start-button {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #start-button:hover {
+    background-color: #ff80ab;
+  }
+  
+  #timer {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
+  #score {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff4081;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: scorePopUp 0.5s forwards;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #game-container {
+      width: 90%;
+      height: 300px;
+      max-width: 400px;
+    }
+    
+    .bubble {
+      font-size: 18px;
+      line-height: 40px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    #input-container {
+      margin-top: 20px;
+    }
+    
+    #number-input {
+      padding: 8px 12px;
+      font-size: 18px;
+    }
+    
+    #start-button {
+      padding: 8px 16px;
+      font-size: 18px;
+    }
+    
+    #timer {
+      font-size: 24px;
+      margin-top: 16px;
+    }
+    
+    #score {
+      font-size: 24px;
+      padding: 16px 24px;
+    }
+  }
+  
+  
+  
+  
+  
+  
