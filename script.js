@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const gameContainer = document.getElementById('game-container');
   const numberInput = document.getElementById('number-input');
